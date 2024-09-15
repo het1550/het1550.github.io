@@ -15,7 +15,3 @@ setInterval(() => {
             navbar.classList.remove('navbar-scrolled');
         }
     });
-    
-
-
- document.getElementsByClassName("btn").style.backgroundColor = "Green";
