@@ -1,0 +1,269 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #f0f0f0; */
+    color: #333;
+    background-image: url("/Assets/Images/elements.png");
+}
+
+/* Glass Effect Navbar */
+.glassy-navbar {
+    background: rgba(3, 3, 3, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Apply the glass blur effect */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow to enhance glass effect */
+    border-bottom: 1px solid rgba(34, 34, 34, 0.3); /* Optional: adds a soft border line */
+    transition: background 0.3s ease-in-out;
+}
+
+.glassy-navbar .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.glassy-navbar .nav-link {
+    color: #fff;
+    margin-right: 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.glassy-navbar .nav-link:hover {
+    color: #d900a1; /* Color on hover */
+}
+
+.glassy-navbar .nav-link.active {
+    color: #6b00f5;
+}
+
+/* Optional: Navbar background change on scroll */
+.navbar-scrolled {
+    background: rgba(0, 0, 0, 0.8); /* Slightly more opaque when scrolling */
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    /* background: linear-gradient(45deg, #6b00f5, #d900a1); */
+    color: rgb(255, 255, 255);
+    position: relative;
+    
+}
+.slides .slide {
+    opacity: 0;
+    font-size: 3em;
+    transition: opacity 0.5s ease-in-out;
+}
+.slides .slide.active {
+    opacity: 1;
+}
+
+/* Gradient Text Styling */
+/* Gradient Text Styling */
+.gradient-text {
+    background: linear-gradient(45deg, #f95890,#9045f1, #794ff6,#ff4242);
+    background-clip: text;
+    -webkit-background-clip: text; /* For WebKit browsers */
+    color: transparent; /* Make the text transparent to show the background */
+    -webkit-text-fill-color: transparent; /* Fallback for WebKit browsers */
+    font-size: 2em; /* Default size for medium devices */
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .gradient-text {
+        font-size: 1.8em; /* Slightly smaller on large tablets or small desktops */
+    }
+}
+
+@media (max-width: 992px) {
+    .gradient-text {
+        font-size: 1.6em; /* Medium tablets and below */
+    }
+}
+
+@media (max-width: 768px) {
+    .gradient-text {
+        font-size: 1.4em; /* Smaller tablets and large phones */
+    }
+}
+
+@media (max-width: 576px) {
+    .gradient-text {
+        font-size: 1.2em; /* Small phones */
+    }
+}
+
+
+/* SVG Curved Divider */
+.custom-shape-divider-bottom-hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.custom-shape-divider-bottom-hero svg {
+    position: relative;
+    display: block;
+    width: calc(140% + 1.3px);
+    height: 150px;
+    transform: rotateY(180deg);
+}
+.custom-shape-divider-bottom-hero .shape-fill {
+    fill: #F0F0F0;
+}
+
+/* Project Cards */
+.project-card{
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: #000000;
+    color: #000000;
+}
+
+#project h2{
+    font-weight: 800;
+}
+
+#project hr{
+    border-top: 5px solid white;
+    width: 50%;
+    margin-left:25%;
+    margin-right:25%
+}
+
+.project-card {
+    transition: transform 0.3s ease;
+}
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+#project{
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        /* min-height: 250px;
+        width: 450px; */
+        border-radius: 1rem;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 1.5rem;
+        color: #fff;
+      
+}
+/* Contact Form */
+/* Glass Effect for Contact Section */
+.glass-effect-section {
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Apply the glass blur effect */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow to enhance glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: soft border for the glass effect */
+    padding: 50px 0; /* Adjust padding for better spacing */
+    border-radius: 20px; /* Rounded corners for a sleek look */
+    color: #000000; /* Text color */
+    margin-top: 50px; /* Space from the section above */
+    text-align: center; /* Center align text */
+}
+
+.glass-effect-section h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.glass-effect-section p {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.glass-effect-section .form-control {
+    background: rgba(0, 0, 0, 0.2); /* Slight transparency for form fields */
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.glass-effect-section .form-control::placeholder {
+    color: rgba(255, 255, 255);
+}
+
+.glass-effect-section .btn-primary {
+    background-color: #6b00f5;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.glass-effect-section .btn-primary:hover {
+    background-color: #d900a1;
+}
+
+/* About Me Section Glass Effect */
+.about {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Apply the glass blur effect */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow to enhance glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: soft border for the glass effect */
+    padding: 50px 0;
+    border-radius: 20px;
+    color: #000000;
+    margin-top: 50px;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.about .section-description {
+    color: #000000;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.about .about-content {
+    color: #000000;
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+.about .about-content p {
+    margin-bottom: 15px;
+}
+
+/* Image Styling */
+.about-img {
+    max-width: 80%; /* Adjust size as needed */
+    border: 5px solid rgba(255, 255, 255, 0.3); /* Optional: white border around image */
+    border-radius: 50%; /* Makes the image a circle */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Soft shadow around image */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-img {
+        max-width: 60%;
+    }
+}
+
+/* Optional: Add hover or animation effects for extra design flair */
+.about-img:hover {
+    transform: scale(1.05); /* Slightly enlarges the image on hover */
+    transition: transform 0.3s ease;
+}
