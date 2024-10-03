@@ -3,17 +3,18 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    /* background-color: #f0f0f0; */
     color: #333;
     background-image: url("/Assets/Images/elements.png");
+    background-size: cover;
+    background-attachment: fixed; /* Ensures the background stays fixed while scrolling */
 }
 
 /* Glass Effect Navbar */
 .glassy-navbar {
-    background: rgba(3, 3, 3, 0.2); /* Semi-transparent background */
-    backdrop-filter: blur(10px); /* Apply the glass blur effect */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow to enhance glass effect */
-    border-bottom: 1px solid rgba(34, 34, 34, 0.3); /* Optional: adds a soft border line */
+    background: rgba(3, 3, 3, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(34, 34, 34, 0.3);
     transition: background 0.3s ease-in-out;
 }
 
@@ -30,16 +31,15 @@ body {
 }
 
 .glassy-navbar .nav-link:hover {
-    color: #d900a1; /* Color on hover */
+    color: #d900a1;
 }
 
 .glassy-navbar .nav-link.active {
     color: #6b00f5;
 }
 
-/* Optional: Navbar background change on scroll */
 .navbar-scrolled {
-    background: rgba(0, 0, 0, 0.8); /* Slightly more opaque when scrolling */
+    background: rgba(0, 0, 0, 0.8);
 }
 
 /* Smooth Scroll */
@@ -47,62 +47,58 @@ html {
     scroll-behavior: smooth;
 }
 
-
 /* Hero Section */
 .hero {
     height: 100vh;
-    /* background: linear-gradient(45deg, #6b00f5, #d900a1); */
-    color: rgb(255, 255, 255);
+    color: #fff;
     position: relative;
-    
 }
+
 .slides .slide {
     opacity: 0;
     font-size: 3em;
     transition: opacity 0.5s ease-in-out;
 }
+
 .slides .slide.active {
     opacity: 1;
 }
 
 /* Gradient Text Styling */
-/* Gradient Text Styling */
 .gradient-text {
-    background: linear-gradient(45deg, #f95890,#9045f1, #794ff6,#ff4242);
+    background: linear-gradient(45deg, #f95890, #9045f1, #794ff6, #ff4242);
     background-clip: text;
-    -webkit-background-clip: text; /* For WebKit browsers */
-    color: transparent; /* Make the text transparent to show the background */
-    -webkit-text-fill-color: transparent; /* Fallback for WebKit browsers */
-    font-size: 2em; /* Default size for medium devices */
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 2em;
     font-weight: bold;
     transition: background 0.3s ease-in-out;
 }
 
-/* Responsive Adjustments */
+/* Responsive Gradient Text */
 @media (max-width: 1200px) {
     .gradient-text {
-        font-size: 1.8em; /* Slightly smaller on large tablets or small desktops */
+        font-size: 1.8em;
     }
 }
 
 @media (max-width: 992px) {
     .gradient-text {
-        font-size: 1.6em; /* Medium tablets and below */
+        font-size: 1.6em;
     }
 }
 
 @media (max-width: 768px) {
     .gradient-text {
-        font-size: 1.4em; /* Smaller tablets and large phones */
+        font-size: 1.4em;
     }
 }
 
 @media (max-width: 576px) {
     .gradient-text {
-        font-size: 1.2em; /* Small phones */
+        font-size: 1.2em;
     }
 }
-
 
 /* SVG Curved Divider */
 .custom-shape-divider-bottom-hero {
@@ -111,6 +107,7 @@ html {
     overflow: hidden;
     line-height: 0;
 }
+
 .custom-shape-divider-bottom-hero svg {
     position: relative;
     display: block;
@@ -118,85 +115,73 @@ html {
     height: 150px;
     transform: rotateY(180deg);
 }
+
 .custom-shape-divider-bottom-hero .shape-fill {
     fill: #F0F0F0;
 }
 
 /* Project Cards */
-.project-card{
+.project-card {
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: #000000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     color: #000000;
-}
-
-#project h2{
-    font-weight: 800;
-}
-
-#project hr{
-    border-top: 5px solid white;
-    width: 50%;
-    margin-left:25%;
-    margin-right:25%
-}
-
-.project-card {
     transition: transform 0.3s ease;
 }
+
 .project-card:hover {
     transform: scale(1.05);
 }
 
-#project{
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        /* min-height: 250px;
-        width: 450px; */
-        border-radius: 1rem;
-        background: rgba(0, 0, 0, 0.3);
-        padding: 1.5rem;
-        color: #fff;
-      
+#project {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+    color: #fff;
 }
+
+#project h2 {
+    font-weight: 800;
+}
+
+#project hr {
+    border-top: 5px solid white;
+    width: 50%;
+    margin-left: 25%;
+}
+
 /* Contact Form */
-/* Glass Effect for Contact Section */
 .glass-effect-section {
-    background: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
-    backdrop-filter: blur(10px); /* Apply the glass blur effect */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow to enhance glass effect */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: soft border for the glass effect */
-    padding: 50px 0; /* Adjust padding for better spacing */
-    border-radius: 20px; /* Rounded corners for a sleek look */
-    color: #000000; /* Text color */
-    margin-top: 50px; /* Space from the section above */
-    text-align: center; /* Center align text */
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 50px 0;
+    border-radius: 20px;
+    color: #fff;
+    margin-top: 50px;
+    text-align: center;
 }
 
 .glass-effect-section h2 {
     font-size: 2.5em;
     font-weight: bold;
-    color: #ffffff;
     margin-bottom: 20px;
 }
 
 .glass-effect-section p {
-    color: #ffffff;
-    font-weight: bold;
     font-size: 1.2em;
     margin-bottom: 40px;
 }
 
 .glass-effect-section .form-control {
-    background: rgba(0, 0, 0, 0.2); /* Slight transparency for form fields */
+    background: rgba(0, 0, 0, 0.2);
     border: none;
     border-radius: 10px;
-    color: #ffffff;
+    color: #fff;
     padding: 10px;
-}
-
-.glass-effect-section .form-control::placeholder {
-    color: rgba(255, 255, 255);
 }
 
 .glass-effect-section .btn-primary {
@@ -211,14 +196,13 @@ html {
     background-color: #d900a1;
 }
 
-/* About Me Section Glass Effect */
+/* About Section Glass Effect */
 .about {
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
-    backdrop-filter: blur(10px); /* Apply the glass blur effect */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow to enhance glass effect */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: soft border for the glass effect */
-    padding: 50px 0;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
+    padding: 50px 0;
     color: #000000;
     margin-top: 50px;
 }
@@ -226,44 +210,84 @@ html {
 .about h2 {
     font-size: 2.5em;
     font-weight: bold;
-    color: #000000;
     margin-bottom: 20px;
 }
 
 .about .section-description {
-    color: #000000;
     font-size: 1.2em;
     margin-bottom: 30px;
-}
-
-.about .about-content {
-    color: #000000;
-    font-size: 1.1em;
-    line-height: 1.8;
-    margin-top: 20px;
 }
 
 .about .about-content p {
     margin-bottom: 15px;
 }
 
-/* Image Styling */
+/* About Image Styling */
 .about-img {
-    max-width: 80%; /* Adjust size as needed */
-    border: 5px solid rgba(255, 255, 255, 0.3); /* Optional: white border around image */
-    border-radius: 50%; /* Makes the image a circle */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Soft shadow around image */
+    max-width: 80%;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Adjustments */
+.about-img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
 @media (max-width: 768px) {
     .about-img {
         max-width: 60%;
     }
 }
 
-/* Optional: Add hover or animation effects for extra design flair */
-.about-img:hover {
-    transform: scale(1.05); /* Slightly enlarges the image on hover */
-    transition: transform 0.3s ease;
+/* Skill section styling */
+.skills{
+    color: #000000;
+    /* background-color: transparent; */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 150px; /* Fixed height for card image */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.card {
+    width: 100%; /* Full width of the column */
+    height: 100%; /* Ensure card occupies the full column height */
+    margin-bottom: 20px; /* Space between the cards */
+}
+
+
+.card {
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent background for cards */
+    backdrop-filter: blur(8px); /* Apply blur to cards as well */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow to enhance the card effect */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: soft border for the card effect */
+    width: 100%; /* Full width of the column */
+    height: 100%; /* Ensure card occupies the full column height */
+    margin-bottom: 20px; /* Space between the cards */
+    border-radius: 10px; /* Rounded corners for cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 40px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.card-img-top {
+    width: 100%; /* Full width to fit the card */
+    height: auto; /* Maintain the aspect ratio */
+    max-width: 640px; /* Constrain the image size to 640px */
+    max-height: 640px; /* Ensure height does not exceed 640px */
+    object-fit: cover; /* Make sure the image covers the area without distortion */
+    margin: 0 auto; /* Center the image horizontally */
+    border-radius: 10px; /* Optional: rounded corners for the image */
+    /* background-color: #F0F0F0; */
+}
+
+.col-md-4{
+    padding: 5px;
 }
